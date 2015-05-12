@@ -15,6 +15,8 @@
             orm.hibernate.one2many.example.dao is denpendent on pojo in orm.hibernate.one2many.example.gen. How to de-couple the generated 
             code while keeping using maven to automate the project build? Some suggests not to re-generate the code again, 
             http://stackoverflow.com/questions/8685301/what-are-best-practices-for-using-hibernates-hbm2java
+        5.  plan to test: NamedQuery
+            
         
         Environment:
         1.  Windows 7 64 bit (assume OS installed in C:\Windows)

@@ -37,11 +37,10 @@ public class StudentDaoClient {
 		StudentDao dao = new StudentDao();
 		Student john = findLastJohn();
 		System.out.println(john.getId() + " is newly added John");
-		List<Object[]> list = dao.findStudentInfoById(john.getId());
-		for(Object[] o : list){
-            Language l = (Language)o[2];
-            if (l.getSymbol().equals("SC")) {
-            	return (String)o[3];
+		List<Object[]> list = dao.findStudentInfoByIdByNative(john.getId());
+		for(Object[] o : list){  			
+            if (((Integer)o[1]).intValue() == 3) {
+            	return (String)o[2];
             }
         }
 		return null;

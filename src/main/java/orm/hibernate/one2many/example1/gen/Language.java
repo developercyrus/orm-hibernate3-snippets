@@ -1,5 +1,5 @@
 package orm.hibernate.one2many.example1.gen;
-// Generated May 12, 2015 3:53:51 PM by Hibernate Tools 3.2.4.GA
+// Generated May 12, 2015 5:01:48 PM by Hibernate Tools 3.2.4.GA
 
 
 import java.util.HashSet;
