@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 12, 2015 3:53:48 PM by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="orm.hibernate.one2many.example1.gen.StudentLoc" table="student_loc" catalog="orm_hibernate_one2many_example1">
+        <composite-id name="id" class="orm.hibernate.one2many.example1.gen.StudentLocId">
+            <key-property name="studentId" type="int">
+                <column name="student_id" />
+            </key-property>
+            <key-property name="languageId" type="int">
+                <column name="language_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="language" class="orm.hibernate.one2many.example1.gen.Language" update="false" insert="false" fetch="select">
+            <column name="language_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="student" class="orm.hibernate.one2many.example1.gen.Student" update="false" insert="false" fetch="select">
+            <column name="student_id" not-null="true" />
+        </many-to-one>
+        <property name="firstname" type="string">
+            <column name="firstname" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

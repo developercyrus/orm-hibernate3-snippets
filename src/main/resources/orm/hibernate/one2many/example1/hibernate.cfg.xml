@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <!-- if using the property name="orm_hibernate_one2many_example1", it's required to use JNDI --> 
+    <!-- 
+    <session-factory>
+        
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/orm_hibernate_one2many_example1</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+                
+        <mapping resource="orm/hibernate/one2many/example1/gen/Student.hbm.xml" />        
+        <mapping resource="orm/hibernate/one2many/example1/gen/StudentLoc.hbm.xml" />
+        <mapping resource="orm/hibernate/one2many/example1/gen/Language.hbm.xml" />              
+    </session-factory>
+    -->
+    
+    <!-- 
+        1.  if simply for using hibernate-tool to generate pojo, hbm.xml, or dao by jndi, 
+            there's no need to add <session-factory name="java:hibernate/SessionFactory">, unlike here to say 
+            https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/session-configuration.html#configuration-optional-jndi
+        2.  no need to place jndi.properties, 
+            unlike here to say http://stackoverflow.com/questions/16419762/registering-mysql-datasource-with-jndi-for-hibernate             
+            this is compromised by using "hibernate.jndi.url" and "hibernate.jndi.class"
+     -->
+    <session-factory> 
+        <property name="hibernate.jndi.url">rmi://localhost:1099</property> 
+        <property name="hibernate.jndi.class">com.sun.jndi.rmi.registry.RegistryContextFactory</property>
+        <property name="hibernate.connection.datasource">jdbc/mysql</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping resource="orm/hibernate/one2many/example1/gen/Student.hbm.xml" />        
+        <mapping resource="orm/hibernate/one2many/example1/gen/StudentLoc.hbm.xml" />
+        <mapping resource="orm/hibernate/one2many/example1/gen/Language.hbm.xml" />        
+    </session-factory> 
+    
+    <!-- 
+    <session-factory name="SessionFactory"> 
+        <property name="hibernate.jndi.url">rmi://localhost:1099</property> 
+        <property name="hibernate.jndi.class">com.sun.jndi.rmi.registry.RegistryContextFactory</property>
+        <property name="hibernate.connection.datasource">jdbc/mysql</property>
+        <property name="hibernate.session_factory_name">java:hibernate/SessionFactory</property> 
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping resource="orm/hibernate/one2many/example1/gen/Student.hbm.xml" />        
+        <mapping resource="orm/hibernate/one2many/example1/gen/StudentLoc.hbm.xml" />
+        <mapping resource="orm/hibernate/one2many/example1/gen/Language.hbm.xml" />        
+    </session-factory> 
+    -->
+     
+</hibernate-configuration>
