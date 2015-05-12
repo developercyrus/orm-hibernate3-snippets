@@ -204,12 +204,12 @@
                 <executions>
 
                     <execution>
-                        <id>orm.hibernate.one2many.example1.jndi.MysqlJNDIServer | launch-jndi </id>
+                        <id>orm.hibernate.one2many.example1.jndi.MysqlJndiServer | launch-jndi </id>
                         <phase>initialize</phase>
                         <configuration>
                             <target>
-                                <echo message="java -classpath ${basedir}\src\main\resources\orm\hibernate\one2many\example1\jndi\jndiserver.jar;${basedir}\src\main\resources\orm\hibernate\one2many\example1\jndi\mysql-connector-java-5.1.9.jar orm.hibernate.one2many.example1.jndi.MysqlJNDIServer" /> 
-                                <java classname="orm.hibernate.one2many.example1.jndi.MysqlJNDIServer" fork="true" spawn="true">      
+                                <echo message="java -classpath ${basedir}\src\main\resources\orm\hibernate\one2many\example1\jndi\jndiserver.jar;${basedir}\src\main\resources\orm\hibernate\one2many\example1\jndi\mysql-connector-java-5.1.9.jar orm.hibernate.one2many.example1.jndi.MysqlJndiServer" /> 
+                                <java classname="orm.hibernate.one2many.example1.jndi.MysqlJndiServer" fork="true" spawn="true">      
                                     <classpath>     
                                         <path path="${basedir}\src\main\resources\orm\hibernate\one2many\example1\jndi\jndiserver.jar;${basedir}\src\main\resources\orm\hibernate\one2many\example1\jndi\mysql-connector-java-5.1.9.jar" />
                                     </classpath>                                                                

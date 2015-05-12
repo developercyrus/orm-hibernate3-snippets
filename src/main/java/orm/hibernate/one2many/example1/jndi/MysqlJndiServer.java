@@ -10,7 +10,7 @@ import javax.naming.NamingException;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 
-public class MysqlJNDIServer {
+public class MysqlJndiServer {
 	public static void main(String[] args) {		
 		try {
 			Properties properties = new Properties();
