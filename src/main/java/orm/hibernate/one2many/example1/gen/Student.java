@@ -1,5 +1,5 @@
 package orm.hibernate.one2many.example1.gen;
-// Generated May 12, 2015 7:14:22 PM by Hibernate Tools 3.2.4.GA
+// Generated May 14, 2015 12:05:03 PM by Hibernate Tools 3.2.4.GA
 
 
 import java.util.Date;

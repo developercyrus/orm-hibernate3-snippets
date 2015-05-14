@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated May 12, 2015 7:14:19 PM by Hibernate Tools 3.2.4.GA -->
+<!-- Generated May 14, 2015 12:05:01 PM by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
     <class name="orm.hibernate.one2many.example1.gen.Language" table="language" catalog="orm_hibernate_one2many_example1">
         <id name="id" type="int">
